@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    color: #fff;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, .6);
+}
+/* Estilos gerais */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #fff;
+   
+}
+
+#titulo {
+    font-size: 2.5em;
+    height: 400px;
+    color: #fff;
+    text-align:justify;
+    background-color: black;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+abbr{
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main{
+    background-image: url('../img/homePageImg/imagem_ipial.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main-fusco{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.445);
+}
+
+section{
+    display: flex;
+    gap: 15rem;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 40px;
+    width: 100%;
+    margin:auto;
+}
+
+/* Seções */
+section.corpo{
+    display: flex;
+    flex-direction: column;
+    gap: 15rem;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 40px;
+    max-width: 1200px;
+    width: 100%;
+    margin:auto;
+}
+
+.container{
+    width: 70%;
+    text-align: justify;
+    padding: 20px;
+}
+
+div h2{
+    text-align: center
+}
+
+.cta{
+    background-color: #3498db;
+    color: white;
+    padding: 40px 20px;
+}
+
+
+.cta .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3498db;
+    flex-direction: column;
+    color: white;
+    padding: 40px 20px;
+}
+
+.cta h2 {
+    font-size: 2em;
+}
+
+.cta .btn {
+    margin-top: 50px;
+    background-color: #2980b9;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+}
+
+.cta .btn:hover {
+    background-color: #1f6f8f;
+}
+
+.ocult{
+    display: none;
+}
+
+@media (max-width:700px){  
+    #titulo {
+    font-size: 2em;
+    height: 400px;
+    color: #fff;
+    margin-bottom: 20px;
+    text-align:center;
+    background-color: black;
+    width: 100%;
+    }
+    .container{
+        width: 100%;
+        text-align: justify;
+        padding: 20px;
+    }
+}

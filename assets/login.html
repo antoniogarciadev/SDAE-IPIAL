@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="no-referrer">
+    <!--Atualiza a página em 30 minutos-->
+    <meta http-equiv="refresh" content="1800">
+    <!--Autores do Site SDAE-->
+    <meta name="author" content="PAMFS, António Garcia, David Maia António, Feliciana David, Frederico Pimenta,  Samira Ferrão"/>
+    <meta name="description" content="Este é um sistema online de acesso ao exame do IPIAL, onde os estudantes podem se registrar, fazer exames de de admissão, e ver resultados dos exames para poderem fazer a matricula na  instituição.">
+    <meta name="keywords" content="Alda Lara, IPIAL, Incrição, Matricula, Exame de Acesso, exame academico, login de estudante, inscrição ao exame, exames online, resultados de exame,Exame e Matricula, plataforma de exames, acesso a exames, Cursos Medios Tecnicos, cursos de informática, cursos de eletricidade, cursos de telecomunicações, curso de construção civil">
+    
+    <link rel="icon" href="img/favicon1.png" type="image/png"><!--favicon-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-footer.css">
+    <link rel="stylesheet" href="css/login.css">
+    <title>Entrar</title>
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container_nav" id="topo">
+                <div id="area-logo">
+                    <div class="logo">
+                    </div>
+                    <div id="logo-texto">
+                        <h1>IPIAL</h1>
+                    </div>
+                </div>
+
+                <div class="hamburguer" onclick="menuocu();">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                
+                <ul class="nav-menu">
+                    <li ><a  class="separate-links" href="../index.html">home</a></li> 
+                    <li ><a href="cursos.html" class="links">cursos</a></li>
+                    <li ><a  class="separate-links"  href="news.html" >Noticias</a></li>
+                    <li ><a href="sobre.html" class="links">sobre nos</a></li>
+                    <li><a href="cadastro.html" class="links">cadastro</a></li>
+
+                    <div class="section-botao2">
+                        <a class="separate-link" href="login.html">login</a>
+                    </div>
+                </ul>
+            </div>
+        </nav>
+    </header>   
+    
+    <section class="container">
+        <div class="input-container">
+            <form>
+                <div class="login">
+                    <h1>Login</h1>
+                </div>
+                <div class="input-group">
+                    <input type="text" id="nome" id="text" name="text" required>
+                    <label for="text">Digite o seu Nome de Usuário</label>
+                </div>
+                
+                <div class="input-group">
+                    <input type="password" id="password" name="password" required>
+                    <label for="password">Digite a sua Senha</label>
+                </div>
+            
+                <div class="link-conta">
+                    <p><a href="#">Esqueceu a sua senha?</a></p>
+                    <p id="paragrafo">Ainda não tem conta?</p>
+                    <p><a href="#">Crie uma conta</a></p>
+                </div>
+                <div class="button-login" required>
+                    <input  id="loginbtn" onclick="logar(); return false" type="submit" value="Enviar">
+                </div>
+            </form>
+        </div>
+    </section>
+    <!-- footer -->
+    <footer>
+        <div id="footer_content">
+            <div id="footer_contacts">
+                <h1>ACESSO IPIAL</h1>
+                <P>Aqui começa sua jornada para a Educação.</P>
+
+                <div id="footer_social_midia">
+                    <a href="#" class="footer-link" id="instagram"><img src="Icones/instagram-ico.jpg"></a>
+
+                    <a href="#" class="footer-link" id="facebook"><img src="Icones/facebook-ico.jpg"></a>
+
+                    <a href="#" class="footer-link" id="whatsApp"><img src="Icones/whatsaap-ico.jpg"></a>
+                </div>
+            </div>
+            <ul class="footer-list">
+                <li><h3>Navegação</h3></li>
+                <li><a href="#" class="footer-link">Voltar ao topo</a></li>
+                <li><a href="../index.html" class="footer-link">Home</a></li>
+                <li><a href="cursos.html" class="footer-link">Cursos</a></li>
+                <li><a href="sobre.html" class="footer-link">Sobre nos</a></li>
+                <li><a href="cadastro.html" class="footer-link">cadastro</a></li>
+            </ul>
+            <ul class="footer-list">
+                <li><h3>Interaja</h3></li>
+                <li><a href="news.html" class="footer-link">Noticias</a></li>
+                <!-- <li><a href="events.html" class="footer-link">Eventos</a></li> -->
+                <!-- <li><a href="suport.html" class="footer-link">Suporte</a></li> -->
+                <li><a href="login.html" class="footer-link">Login</a></li>
+            </ul>
+            <div id="subscribe">
+                <h3>Cadastre - se</h3>
+                <p>Cadastra-se com o seu e-mail para ficar a par sobre as nossas novidades, actividades e eventos.</p>
+
+                <button id="subscribe-button"><a href="cadastro.html" class="subscribe-link">Inscrever</a></button>
+            </div>
+        </div>
+        <div id="footer_copyright">
+            &copy; 2024 all rights reserved
+        </div>
+    </footer>
+
+    <script src="js/login.js"></script>
+  
+</body>
+</html>

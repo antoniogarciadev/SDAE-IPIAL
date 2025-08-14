@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="no-referrer">
+    <!--Atualiza a página em 30 minutos-->
+    <meta http-equiv="refresh" content="1800">
+    <!--Autores do Site SDAE-->
+    <meta name="author" content="PAMFS, António Garcia, David Maia António, Feliciana David, Frederico Pimenta,  Samira Ferrão"/>
+    <meta name="description" content="Este é um sistema online de acesso ao exame do IPIAL, onde os estudantes podem se registrar, fazer exames de de admissão, e ver resultados dos exames para poderem fazer a matricula na  instituição.">
+    <meta name="keywords" content="Alda Lara, IPIAL, Incrição, Matricula, Exame de Acesso, exame academico, login de estudante, inscrição ao exame, exames online, resultados de exame,Exame e Matricula, plataforma de exames, acesso a exames, Cursos Medios Tecnicos, cursos de informática, cursos de eletricidade, cursos de telecomunicações, curso de construção civil">
+    
+    <link rel="icon" href="img/favicon1.png" type="image/png"><!--favicon-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cadastro.css">
+    <link rel="stylesheet" href="css/style-footer.css">
+    <title>cadastrar</title>
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container_nav" id="topo">
+                <div id="area-logo">
+                    <div class="logo">
+                    </div>
+                    <div id="logo-texto">
+                        <h1>IPIAL</h1>
+                    </div>
+                </div>
+
+                <div class="hamburguer" onclick="menuocu();">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                
+                <ul class="nav-menu">
+                    <li ><a  class="separate-links" href="../index.html">home</a></li> 
+                    <li ><a href="cursos.html" class="links">cursos</a></li>
+                    <li ><a  class="separate-links"  href="news.html" >Noticias</a></li>
+                    <li ><a href="sobre.html" class="links">sobre nos</a></li>
+                    <li><a href="cadastro.html" class="links">cadastro</a></li>
+
+                    <div class="section-botao2">
+                        <a class="separate-link" href="login.html">login</a>
+                    </div>
+                </ul>
+            </div>
+        </nav>
+    </header>   
+
+    <section class="section-container">
+
+        <div class="requisitos">
+            <h1>Requisitos para inscrição</h1>
+            <p>
+                Para cadastrar-se e matricular-se no IPIAL, é necessário comprir com alguns requisitos como:<br>
+            </p>
+            <ul>
+                <li> O aluno deve ter uma idade minima de 15 anos.</li>
+                <li>Ter o priméiro ciclo do ensino secundário concluido.</li>
+                <li>Ter em mãos a cópia do certificado de conclusão da 9ª classe</li>
+                <li>Fazer o pagamento do Pagamento do Rupi e entrga do comprovativo de pagamento.
+                    <ul>
+                        <li>
+                            O pagamento pode ser feito em um banco de sua preferência.
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <p>Ainda não pagou o rupi? <a href="pay.html">Pagar</a></p>
+        </div>
+
+        <div class="container">
+            <form>
+                <div class="cadastro1">
+                    <h1>Cadastro</h1>
+                </div>
+
+                <div class="input-group">
+                    <input type="text" id="text" name="text" required>
+                    <label id="label3" for="text">Digite o seu Nome Completo</label>
+                </div>
+                
+                <div class="input-group">
+                    <input type="email" id="email" name="email" required>
+                    <label id="label3" for="text">Digite o seu E-mail</label>
+                </div>
+
+                <div class="input-group">
+                    <label id="label4" for="tel">Digite o seu número de telefone</label><br>
+                    <input type="tel" id="tel" name="tel" placeholder="(+244)">
+                </div>
+
+                <div class="input-group">
+                    <input type="text" id="rupe" name="rupe" required>
+                    <label id="label3" for="text">Digite o seu nº do comprovativo</label>
+                </div>
+                
+                <div class="input-group">
+                    <label id="label4" for="date">Data de nascimento</label><br>
+                    <input type="date" id="date" name="date" required>
+                </div>
+
+                <div class=" genero">   
+                    <div>                    
+                        <input type="radio" id="gender" name="gender" required>
+                        <label   class="generos" for="gender">Feminino</label>
+                    </div>
+                    
+                    <div>
+                        <input type="radio" id="gender" name="gender" required>
+                        <label  class="generos" for="gender">Masculino</label>
+                    </div>      
+                </div>
+               
+                <div class="selecao">
+                    <select name="escolha" id="escolha" class="escolha" required>
+                        <option class="op1" value="">Escolha o curso</option>
+                        <option class="op1"  value="Informática">Informática</option>
+                        <option class="op1"  value="Construção civil">Construção civil</option>
+                        <option class="op1"  value="Electricidade">Electricidade</option>
+                        <option  class="op1" value="Electrónica e Telecomunicações">Electrónica e Telecomunicações</option>
+  
+                    </select>
+                </div>
+
+                <div class="ficheiro">  
+
+                    <label for="file" id="file1" class="label1">Enviar o BI</label>                  
+                    <input type="file" id="file2" name="file" required>
+
+                    <label for="file" class="label1">Enviar o certificado</label>                  
+                    <input type="file" id="file" name="file" required> 
+                </div> 
+
+                <div class="button-cadastro">
+                    <button type="submit" id="a1">Entrar</button>
+                </div>
+            </form>
+        </div>
+    </section>
+  
+    <!-- footer -->
+    <footer>
+        <div id="footer_content">
+            <div id="footer_contacts">
+                <h1>ACESSO IPIAL</h1>
+                <P>Aqui começa sua jornada para a Educação.</P>
+
+                <div id="footer_social_midia">
+                    <a href="#" class="footer-link" id="instagram"><img src="Icones/instagram-ico.jpg"></a>
+
+                    <a href="#" class="footer-link" id="facebook"><img src="Icones/facebook-ico.jpg"></a>
+
+                    <a href="#" class="footer-link" id="whatsApp"><img src="Icones/whatsaap-ico.jpg"></a>
+                </div>
+            </div>
+            <ul class="footer-list">
+                <li><h3>Navegação</h3></li>
+                <li><a href="#" class="footer-link">Voltar ao topo</a></li>
+                <li><a href="../index.html" class="footer-link">Home</a></li>
+                <li><a href="cursos.html" class="footer-link">Cursos</a></li>
+                <li><a href="sobre.html" class="footer-link">Sobre nos</a></li>
+                <li><a href="cadastro.html" class="footer-link">cadastro</a></li>
+            </ul>
+            <ul class="footer-list">
+                <li><h3>Interaja</h3></li>
+                <li><a href="news.html" class="footer-link">Noticias</a></li>
+                <!-- <li><a href="events.html" class="footer-link">Eventos</a></li> -->
+                <!-- <li><a href="suport.html" class="footer-link">Suporte</a></li> -->
+                <li><a href="login.html" class="footer-link">Login</a></li>
+            </ul>
+            <div id="subscribe">
+                <h3>Cadastre - se</h3>
+                <p>Cadastra-se com o seu e-mail para ficar a par sobre as nossas novidades, actividades e eventos.</p>
+
+                <button id="subscribe-button"><a href="cadastro.html" class="subscribe-link">Inscrever</a></button>
+            </div>
+        </div>
+        <div id="footer_copyright">
+            &copy; 2024 all rights reserved
+        </div>
+    </footer>
+</body>
+</html>

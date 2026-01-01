@@ -1,7 +1,8 @@
 *{
     margin:0;
     padding:0;
-    font-family: 'poppins'; 
+    font-family: 'poppins';
+    box-sizing: border-box;
 }
 
 html {
@@ -17,6 +18,7 @@ body{
     max-width: 1350px;
     margin: auto;
 }
+
 header{
     height:5rem;
     margin-bottom: -20px;
@@ -171,19 +173,18 @@ section.texto_animado{
     align-items:center;
     text-align: center;
     padding-top: 100px;
-    background-color: rgba(0, 0, 0, .3);
+    background-color: rgba(0, 0, 0, .6);
 }
 
-h2.tex-ani{
+.animated-text{
     position: relative;
-    margin-top: 100px;
     opacity: 0;
-    transition:7s;
     text-align: center;
     transform: translateX(-5%);
-    animation: move 5s forwards ease-out;
-    font-size: 24pt;
+    animation: move 2s forwards ease-out;
+    font-size: 2em;
     z-index: 1;
+    color: #fff;
 }
 
 #break-1, #break-2{
@@ -193,28 +194,30 @@ h2.tex-ani{
 @keyframes move{
     from{
         opacity:0;
-        transform:translate(-100%);
+        transform:translateX(-100%);
+        margin-top: 100px;
     }
     to{
+        margin-top: 100px;
         opacity: 1;
         transform: translateX(0);
     }
 }
 
 .button-animate{
-    border:1px solid;
     border-radius: 12px;
     position: relative;
-    margin-top: 160px;
+    margin-top: 100px;
     padding:12px;
     width:200px;
-    font-size:123%;
+    font-size:16pt;
     border: 1px solid blueviolet;
     background-color: transparent;
     cursor: pointer;
     animation:tictac 2s infinite;
     
     &:hover{
+        border: 2px solid blueviolet;
         background-color: #0c0c0cbb;
     }
 }
@@ -285,7 +288,6 @@ div.home_img{
     width: 250px; 
     height: 300px;
     background-color: #dddada;
-    /* border: 5px solid rgb(237, 233, 240); */
     border-radius: 14px;
     background-size: cover;
     display: flex;
@@ -293,10 +295,11 @@ div.home_img{
     align-items: center;
     justify-content: center;
     transition:all 0.5s ease-in;
+    overflow: hidden;
 }
 
 div.home_img:hover{
-    transform:scale(1.3);
+    transform:scale(1.1);
     z-index: 2;
     box-shadow: 4px 10px 20px #474747aa;
 }
@@ -304,48 +307,52 @@ div.home_img:hover{
 div.home_img:nth-child(1){
     background-image:url(../img/construcao_civil/flat-lay-construction-architect-equipment-with-copyspace.jpg);
     background-size:cover;
+    background-position: center;
 }
 
 div.home_img:nth-child(2){
     background-image:url(../img/eletricidade/expert-looks-online-new-air-filters.jpg);
     background-size:cover;
+    background-position: center;
 }
 
 div.home_img:nth-child(3){
     background-image:url('../img/electronica/pic-pessoa-1.jpg');
     background-size:cover;
+    background-position: center;
 }
 
 div.home_img:nth-child(4){
+    background-position: center;
     background-image:url(../img/informatica/pexels-mikhail-nilov-7988114.jpg);
     background-size:cover;
 }
 
 div.box-t-info{
-    border-radius: 14px;
     padding: 10px 0;
-    width: 250px;
-    height: 300px;
+    width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content:center;
-    background-color: #18171750;  
+    background-color: #18171750;
+    transform: .5s;
 }
 
-div.box-t-info:hover{
+div.home_img:hover div.box-t-info{
    opacity: 0;
 }
 
 h1.nome_curso{
     text-align: center;
     font-weight:500;
-    font-size:14pt;
+    font-size:16pt;
     font-family: Poppins;
     color:#fdfdfd;
     text-shadow: 1px 1px 1px rgba(0,0,0,0.4);
 }
 
-div.home_img div.mais{
+div.home_img div.seemore{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -355,17 +362,18 @@ div.home_img div.mais{
     border-radius: 12px;
     gap: 1rem;
     background-color: #18171783;
-    visibility: hidden;
+    opacity: 0;
     font-size: 8pt;
+    transform: .5s;
 }
 
-div.mais h1{
+div.seemore h1{
     text-align: center;
     color:#fff;
     text-shadow: 0px 0px 2px rgba(0,0,0,0.6);
 }
 
-div.mais button {
+div.seemore button {
     border:none;
     outline: none;
     padding:12px;
@@ -373,11 +381,39 @@ div.mais button {
     background-color: #fff;
 }
 
-div.mais button:hover{
+div.seemore button:hover{
     transform: scale(1.05);
     transition: 0.6s ease;
     background-color:black;
     color:white;
+}
+
+div.home_img:hover div.seemore{
+    opacity: 1  ;
+    width: 80%;
+}
+
+/* Animação que faz os items se moverem da esquerda para direita */
+.appear-item{
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 15%;
+}
+
+@keyframes appear {
+    from{
+        opacity: 0;
+        /* scale:0.5; */
+        transform: translateX(-100px);
+        /* clip-path: inset(100% 100% 0 0); */
+    }
+
+    to{
+        opacity: 1;
+        /* scale:1; */
+        transform: translateX(0px);
+        /* clip-path: inset(0 0 0 0); */
+    }
 }
 
 .info_alda{
@@ -386,7 +422,7 @@ div.mais button:hover{
     align-items: center;
     justify-content: center;
     gap:1rem;
-    box-shadow: 1px 1px 12px rgba(0,0,0,0.4);
+    box-shadow: 0px 6px 12px -2px rgba(0,0,0,0.4);
     background-color: #fff;
     border-radius: 12px;
     padding: 10px;
@@ -400,9 +436,7 @@ div.mais button:hover{
     text-align: justify;
     width: 45%;
     color: #111827;
-    /* margin-bottom: 100px; */
     padding: 20px;
-    /* box-shadow: 1px 1px 12px rgba(0,0,0,0.4); */
 }
 
 .video-container{
@@ -413,9 +447,6 @@ div.mais button:hover{
     height: 350px;
     border-radius: 12px;
     padding: 10px;
-    /* background-color: #fff; */
-    /* box-shadow: 1px 1px 12px rgba(0,0,0,0.4); */
-    /* margin-bottom: 50px; */
 }
 
 video {
@@ -423,7 +454,6 @@ video {
     height: 3/0;
     margin: 0 auto;
     outline: none;
-    /* margin-top: 5px; */
     border-radius: 12px 12px 12px 12px;
 }
 
@@ -698,28 +728,5 @@ video {
         column-gap: 2rem;
         padding:20px;
         margin-bottom: 1rem;
-    }
-}
-
-
-.apareca{
-    animation: appear2 linear;
-    animation-timeline: view();
-    animation-range: entry 0% cover 20%;
-}
-
-@keyframes appear2 {
-    from{
-        opacity: 0;
-        /* scale:0.5; */
-        transform: translateX(-100px);
-        /* clip-path: inset(100% 100% 0 0); */
-    }
-
-    to{
-        opacity: 1;
-        /* scale:1; */
-        transform: translateX(0px);
-        /* clip-path: inset(0 0 0 0); */
     }
 }

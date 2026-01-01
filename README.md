@@ -6,6 +6,6 @@ O mesmo foi feito no âmbito de uma avaliação prática realizada por mim (Ant�
 
 Este repositório tem como finalidade:
 
-* Quardar os arquivos do projecto;
+* Guardar os arquivos do projecto;
 
-* Fazer a continuação e (alteração e eatualização) do projeto.
+* Fazer a continuação (alteração e eatualização) do projeto.
